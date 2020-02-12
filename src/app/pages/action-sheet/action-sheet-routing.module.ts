@@ -1,15 +1,27 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-import { ComponentsModule } from 'src/app/components/components.module';
-import { IonicModule } from '@ionic/angular';
+import { ActionSheetPage } from './action-sheet.page';
 
 
 
+
+const routes: Routes = [
+  {
+    path: '', 
+    component: ActionSheetPage,
+    children: [
+      {
+        path: 'alert',
+        loadChildren: '../alert/alert.module#AlertPageModule' 
+
+      }
+    ]
+  }
+  
+];
 @NgModule({
   imports: [
-  ComponentsModule,
-  IonicModule
+  RouterModule.forChild(routes)
   ],
   exports: [RouterModule],
 })

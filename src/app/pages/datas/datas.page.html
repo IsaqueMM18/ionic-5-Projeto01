@@ -1,0 +1,46 @@
+
+<app-header titulo="Datas"> </app-header>
+
+<ion-content>
+  
+  <ion-list>
+    <ion-item>
+      <ion-label>Data Simples</ion-label>
+      <ion-datetime displayFormat="DD/MM/YY" 
+      placeholder="Select Date"
+      cancelText= "cancelar"
+      [ngModel]= "dataAtual.toISOString()"
+      (ionChange)= "trocarData($event)">
+    </ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Data com Intervalo</ion-label>
+      <ion-datetime displayFormat="DD/MM/YY" 
+      placeholder="Select Date"
+      cancelText= "cancelar"
+      [ngModel]= "dataAtual.toISOString()"
+      min="2020-01-01"
+      max="2020-01-04"
+    >
+    </ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Data (Ano)</ion-label>
+      <ion-datetime displayFormat="YYYY" 
+      placeholder="Select Date"
+      cancelText= "cancelar"
+      [ngModel]= "dataAtual.toISOString()"
+      min="2020"
+      max="2025"
+    >
+    </ion-datetime>
+    </ion-item>
+
+  </ion-list>
+  
+  
+</ion-content>
+<!-- value={{dataAtual}} -->
+

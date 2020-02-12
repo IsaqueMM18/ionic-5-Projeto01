@@ -1,0 +1,38 @@
+[
+    {
+      
+      "icone":"appstore",
+      "nome":"Alerta",
+      "link": "/alert"
+    },
+  
+    {
+      "icone":"clipboard",
+      "nome":"Abas",
+      "link": "/action-sheet"
+    },
+  
+    {
+      "icone":"card",
+      "nome":"Cards",
+      "link": "/cards"
+    },
+  
+    {
+      "icone":"calendar",
+      "nome":"Datas",
+      "link": "/datas"
+    },
+    
+    {
+      "icone":"grid",
+      "nome":"Colunas",
+      "link": "/grid"
+    },
+  
+    {
+      "icone":"logo-linkedin",
+      "nome":"Inputs",
+      "link": "/input"
+    } 
+  ]

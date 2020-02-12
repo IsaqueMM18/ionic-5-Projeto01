@@ -5,19 +5,19 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { InicioPageRoutingModule } from './inicio-routing.module';
+import { CardsPageRoutingModule } from './cards-routing.module';
 
-import { InicioPage } from './inicio.page';
-import { MenuComponent } from 'src/app/components/menu/menu.component';
+import { CardsPage } from './cards.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    InicioPageRoutingModule,
+    CardsPageRoutingModule,
     ComponentsModule
+    
   ],
-  declarations: [InicioPage]
+  declarations: [CardsPage]
 })
-export class InicioPageModule {}
+export class CardsPageModule {}

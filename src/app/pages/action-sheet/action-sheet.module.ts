@@ -6,22 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { ActionSheetPage } from './action-sheet.page';
-import { Routes, RouterModule } from '@angular/router';
+import { ActionSheetPageRoutingModule } from './action-sheet-routing.module';
 
-const routes: Routes = [
-  {
-    path: '', 
-    component: ActionSheetPage,
-    children: [
-      {
-        path: 'alert',
-        loadChildren: '../alert/alert.module#AlertPageModule' 
-
-      }
-    ]
-  }
-  
-];
 
 @NgModule({
   imports: [
@@ -29,7 +15,8 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     ComponentsModule,
-    RouterModule.forChild(routes)
+    ActionSheetPageRoutingModule
+    
 
   ],
   declarations: [ActionSheetPage]

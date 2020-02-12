@@ -11,6 +11,8 @@ export class AlertPage implements OnInit {
  
 
   constructor(public alertController: AlertController) { }
+
+  titulo: string;
   
   async presentAlert() {
     const alert = await this.alertController.create({
@@ -101,6 +103,40 @@ export class AlertPage implements OnInit {
 
     await alert.present();
   }
+
+
+
+  async presentInput() {
+    const alert = await this.alertController.create({
+      header: 'Prompt!',
+      inputs: [
+        {
+          name: 'txtTitulo',
+          type: 'text',
+          placeholder: 'titulo'
+        }
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: () => {
+            console.log('Confirm Cancel');
+          }
+        }, {
+          text: 'Ok',
+          handler: (data) => {
+            console.log('Confirm Ok', data);
+            this.titulo= data.txtTitulo;
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
+
 
 
   
